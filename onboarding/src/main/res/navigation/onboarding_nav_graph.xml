@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_nav_graph"
+    app:startDestination="@id/getStartedFragment">
+
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.searchai.onboarding.getStarted.presentation.fragments.GetStartedFragment"
+        android:label="fragment_get_started"
+        tools:layout="@layout/fragment_get_started" >
+        <action
+            android:id="@+id/action_getStartedFragment_to_interestsFragment"
+            app:destination="@id/interestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interestsFragment"
+        android:name="com.searchai.onboarding.interests.presentation.fragments.InterestsFragment"
+        android:label="fragment_interests"
+        tools:layout="@layout/fragment_interests" >
+        <action
+            android:id="@+id/action_interestsFragment_to_selectLanguageFragment"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.searchai.onboarding.selectLanguage.presentation.fragments.SelectLanguageFragment"
+        android:label="fragment_select_language"
+        tools:layout="@layout/fragment_select_language" />
+</navigation>

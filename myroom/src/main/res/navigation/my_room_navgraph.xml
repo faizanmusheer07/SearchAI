@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_room_navgraph"
+    app:startDestination="@id/createRoomFragment">
+
+    <fragment
+        android:id="@+id/createRoomFragment"
+        android:name="com.searchai.myroom.createRoom.presentation.fragments.CreateRoomFragment"
+        android:label="fragment_create_room"
+        tools:layout="@layout/fragment_create_room" >
+<!--        <action-->
+<!--            android:id="@+id/action_createRoomFragment_to_cameraFragment"-->
+<!--            app:destination="@id/cameraFragment"-->
+<!--            app:enterAnim="@anim/fade_in"-->
+<!--            app:exitAnim="@anim/fade_out"-->
+<!--            app:popEnterAnim="@anim/fade_in"-->
+<!--            app:popExitAnim="@anim/fade_out"/>-->
+        <action
+            android:id="@+id/action_createRoomFragment_to_createHubFragment"
+            app:destination="@id/createHubFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createHubFragment"
+        android:name="com.searchai.myroom.createHub.presentation.fragments.CreateHubFragment"
+        android:label="fragment_create_hub"
+        tools:layout="@layout/fragment_create_hub" >
+        <action
+            android:id="@+id/action_createHubFragment_to_selectRoomCategoryFragment"
+            app:destination="@id/selectRoomCategoryFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/selectRoomCategoryFragment"
+        android:name="com.searchai.myroom.selectCategories.presentation.fragments.SelectRoomCategoryFragment"
+        android:label="SelectRoomCategoryFragment" />
+</navigation>

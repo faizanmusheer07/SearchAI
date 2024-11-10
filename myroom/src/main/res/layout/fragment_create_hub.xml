@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_layout_create_hub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog"
+    app:layoutDescription="@xml/fragment_create_hub_scene"
+    tools:context=".createHub.presentation.fragments.CreateHubFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/createHubConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@id/create_hub_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/room_notice_dropdown_icon"
+                android:layout_width="@dimen/dimen_40"
+                android:layout_height="@dimen/dimen_7"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_tabicon" />
+
+            <LinearLayout
+                android:id="@+id/top_hub_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_50"
+                android:gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_notice_dropdown_icon">
+
+
+                <ImageView
+                    android:id="@+id/hub_img"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_marginRight="@dimen/dimen_3"
+                    app:layout_constraintBottom_toBottomOf="@+id/top_hub_holder"
+                    app:layout_constraintTop_toTopOf="@+id/hub_txt"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_hubnew"
+                    tools:layout_editor_absoluteX="141dp" />
+
+                <TextView
+                    android:id="@+id/hub_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/myspace"
+                    android:textAlignment="center"
+                    android:textColor="@color/cpTextDark"
+                    android:textSize="@dimen/font_size_23"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_7"
+                android:gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top_hub_holder">
+
+
+                <ImageView
+                    android:id="@+id/encrypt_img"
+                    android:layout_width="@dimen/dimen_16"
+                    android:layout_height="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_2"
+                    app:srcCompat="@drawable/ic_privetencriptedlight" />
+
+                <TextView
+                    android:id="@+id/encrypt_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:text="@string/jm_3_know_more"
+                    android:textColor="@color/cpHelpText"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toEndOf="@+id/hub_txt"
+                    app:layout_constraintStart_toStartOf="@+id/hub_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/hub_txt" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                creatorImage="@{image}"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:layout_marginStart="@dimen/dimen_15"
+                android:background="@drawable/ic_user_defolt_avator"
+                android:foreground="@drawable/stroke_drawable"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/add_title_edittext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/add_title_edittext" />
+
+            <EditText
+                android:id="@+id/add_title_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40"
+                android:background="@drawable/myspace_round_button"
+                android:elevation="@dimen/dimen_0"
+                android:hint="@string/Roomhint"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:paddingHorizontal="@dimen/dimen_10"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:text="@={viewModel.roomTitle}"
+                android:textColor="@color/cpDark"
+                android:textColorHint="@color/cpNavLine"
+                android:textSize="@dimen/font_size_22"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@id/userImage"
+                app:layout_constraintStart_toEndOf="@+id/userImage"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <ImageView
+                android:id="@+id/linearButton"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_marginTop="15dp"
+                android:elevation="@dimen/dimen_0"
+                android:padding="@dimen/dimen_5"
+                android:stateListAnimator="@null"
+                app:layout_constraintEnd_toStartOf="@+id/add_topic"
+                app:layout_constraintTop_toBottomOf="@+id/btnSchedule"
+                app:srcCompat="@drawable/ic_addmemyspace" />
+
+            <TextView
+                android:id="@+id/add_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hubTopic"
+                android:textAllCaps="false"
+                android:textColor="@color/cpPrimeBlue"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:autoSizeTextType = "uniform"
+                app:layout_constraintBottom_toBottomOf="@+id/linearButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearButton" />
+
+            <ProgressBar
+                android:id="@+id/btn_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_0"
+                android:indeterminateTint="@color/Black"
+                android:translationZ="@dimen/dimen_10"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/linearButton"
+                app:layout_constraintEnd_toEndOf="@+id/linearButton"
+                app:layout_constraintStart_toStartOf="@+id/linearButton"
+                app:layout_constraintTop_toTopOf="@+id/linearButton" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/go_live_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_43"
+                android:layout_marginHorizontal="@dimen/dimen_15"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_viewbutton"
+                android:elevation="@dimen/dimen_0"
+                android:gravity="center"
+                android:letterSpacing="0.01"
+                android:stateListAnimator="@null"
+                android:text="@string/go_live"
+                android:textAllCaps="false"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_title_edittext" />
+
+            <LinearLayout
+                android:id="@+id/btnSchedule"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_43"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/card_view_border"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/go_live_button"
+                app:layout_constraintStart_toStartOf="@+id/go_live_button"
+                app:layout_constraintTop_toBottomOf="@+id/go_live_button">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_20"
+                    android:layout_height="@dimen/dimen_20"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_scheduleicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dimen_7"
+                    android:text="@string/Schedule_myspace"
+                    android:textAllCaps="false"
+                    app:autoSizeTextType = "uniform"
+                    android:textColor="@color/cpTextDark"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/display_topics_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:gravity="center"
+                android:text="@string/area_of_topic"
+                android:textAlignment="center"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="normal"
+                app:autoSizeTextType = "uniform"
+                app:layout_constraintEnd_toEndOf="@+id/add_topic"
+                app:layout_constraintStart_toStartOf="@+id/linearButton"
+                app:layout_constraintTop_toBottomOf="@+id/add_topic" />
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_iquestion" />
+
+            <TextView
+                android:id="@+id/everyone_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/every"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:autoSizeTextType = "uniform"
+                app:layout_constraintStart_toEndOf="@+id/everyone_switch"
+                app:layout_constraintTop_toBottomOf="@+id/display_topics_txt" />
+
+            <TextView
+                android:id="@+id/everyone_desc"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:text="@string/helpforeveryonemyspace"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_13"
+                app:autoSizeTextType = "uniform"
+                app:layout_constraintStart_toStartOf="@+id/everyone_txt"
+                app:layout_constraintTop_toBottomOf="@+id/everyone_txt" />
+
+            <TextView
+                android:id="@+id/lock_hub_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/hubLock"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:autoSizeTextType = "uniform"
+                app:layout_constraintStart_toStartOf="@+id/everyone_txt"
+                app:layout_constraintTop_toBottomOf="@+id/everyone_desc" />
+
+            <TextView
+                android:id="@+id/lock_hub_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Only_people_W"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_13"
+                app:autoSizeTextType = "uniform"
+                app:layout_constraintStart_toStartOf="@+id/lock_hub_txt"
+                app:layout_constraintTop_toBottomOf="@+id/lock_hub_txt" />
+
+            <Switch
+                android:id="@+id/everyone_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:checked="true"
+                android:elevation="1dp"
+                android:thumb="@drawable/custom_switch_thumb"
+                android:track="@drawable/custom_switch_track"
+                app:layout_constraintBottom_toBottomOf="@+id/everyone_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/everyone_txt" />
+
+            <Switch
+                android:id="@+id/lock_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:thumb="@drawable/custom_switch_thumb"
+                android:track="@drawable/custom_switch_track"
+                app:layout_constraintBottom_toBottomOf="@+id/lock_hub_desc"
+                app:layout_constraintStart_toStartOf="@+id/everyone_switch"
+                app:layout_constraintTop_toTopOf="@+id/lock_hub_txt" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addBtn"
+                android:layout_width="70dp"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginBottom="104dp"
+                android:background="@drawable/round_enable_viewbutton"
+                android:elevation="@dimen/dimen_0"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/create_hub_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_15"
+                android:background="@drawable/round_view_btn_blue"
+                android:elevation="@dimen/dimen_0"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="@string/createmyspace"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+            <ProgressBar
+                android:id="@+id/permission_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:background="@drawable/circle_shape_blue"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/cpPrimeBlue"
+                android:translationZ="@dimen/dimen_10"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_15"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:visibility="visible" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>

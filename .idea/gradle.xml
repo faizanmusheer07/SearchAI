@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/auth" />
+            <option value="$PROJECT_DIR$/camera" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/explore" />
+            <option value="$PROJECT_DIR$/messaging" />
+            <option value="$PROJECT_DIR$/myroom" />
+            <option value="$PROJECT_DIR$/onboarding" />
+            <option value="$PROJECT_DIR$/profile" />
+            <option value="$PROJECT_DIR$/webrtc" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+    <option name="offlineMode" value="true" />
+    <option name="parallelModelFetch" value="true" />
+  </component>
+</project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyworldChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_selector</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipStrokeColor">@color/chip_selector_stroke_color</item>
+        <item name="chipCornerRadius">@dimen/dimen_18</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="chipMinHeight">@dimen/dimen_35</item>
+        <item name="chipSpacingVertical">@dimen/dimen_9</item>
+        <item name="chipSpacingHorizontal">@dimen/dimen_9</item>
+        <item name="chipStartPadding">@dimen/dimen_5</item>
+        <item name="chipEndPadding">@dimen/dimen_5</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <!--        <item name="android:textStyle">bold</item>-->
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="rippleColor">@color/cpTransparent</item>
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
+    </style>
+</resources>

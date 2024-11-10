@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+        <!-- Title and description -->
+        <TextView
+            android:id="@+id/tv_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topic"
+            android:textSize="@dimen/font_size_24"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_choose_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chose area you are of expertise"
+            android:textSize="@dimen/font_size_15"
+            android:textColor="@color/Black"
+            app:layout_constraintTop_toBottomOf="@id/tv_topic"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Done button -->
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:backgroundTint="@color/cpBackgroundbutton"
+            android:background="@drawable/button_large_background_disabled"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/font_size_18"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_area"
+        tools:layout_editor_absoluteX="16dp" />
+
+        <!-- Category ChipGroup -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/category_chip_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:singleSelection="true" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/category_chip_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Subcategory ChipGroup -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/subcategory_chip_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:singleSelection="true"
+            app:layout_constraintTop_toBottomOf="@id/category_chip_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_daily_active"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_5"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/dimen_15"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/user_daily_view"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/user_daily_search"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/hub_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="00"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_35"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/create_hub_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/createmyspace"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_daily_search"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/user_daily_revenue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/user_daily_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/tv_profile_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_35"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/views"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_daily_revenue"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/user_daily_search"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/tv_earnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0K"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_35"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/revenue"
+                android:textColor="@color/cpHelpText"
+                android:textSize="@dimen/font_size_13" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

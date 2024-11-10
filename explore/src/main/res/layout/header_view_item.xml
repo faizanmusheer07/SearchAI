@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView27"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewChild"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dimen_1"
+        android:paddingVertical="@dimen/dimen_3"
+        android:text="@string/get_inspire"
+        android:textColor="@color/cpTextDark"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/recyclerViewChild"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:setAdapter="@{headAdapter}"
+        offScreenPageLimit="3"
+        pageTransformer="true"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="@dimen/dimen_0"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:nestedScrollingEnabled="true"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:theme="@style/EdgeOverlayTheme" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewChild"
+        app:setPager="@{recyclerViewChild}"
+        app:tabBackground="@drawable/tab_indicator_selector"
+        app:tabIndicatorHeight="@dimen/dimen_0"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/dimen_5"
+        android:backgroundTint="@color/cpTransparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

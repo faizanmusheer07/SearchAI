@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/onboarding_nav_graph">
+
+    <include app:graph="@navigation/onboarding_nav_graph" />
+    <include app:graph="@navigation/profile_nav_graph" />
+    <include app:graph="@navigation/my_room_navgraph" />
+
+    <action
+        android:id="@+id/action_onboarding_to_profile"
+        app:destination="@id/profile_nav_graph"
+        app:popUpTo="@id/onboarding_nav_graph"
+        app:popUpToInclusive="true" />
+<!--    <action-->
+<!--        android:id="@+id/action_global_create_room_navgraph"-->
+<!--        app:destination="@id/create_room_navgraph"-->
+<!--        app:popUpTo="@id/onboarding_nav_graph"-->
+<!--        app:popUpToInclusive="true" />-->
+
+
+</navigation>

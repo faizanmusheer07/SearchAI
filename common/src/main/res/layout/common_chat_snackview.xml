@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_16"
+    android:background="@color/cpBottomSheetBackground"
+    android:paddingVertical="@dimen/dimen_5"
+    app:cardCornerRadius="@dimen/dimen_16">
+<!--    app:cardBackgroundColor="@color/quantum_grey"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_16"
+        android:paddingVertical="@dimen/dimen_5">
+
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:ellipsize="end"
+            android:text="Username"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:ellipsize="end"
+            android:text="Message"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintStart_toStartOf="@id/tvUser"
+            app:layout_constraintTop_toBottomOf="@id/tvUser" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

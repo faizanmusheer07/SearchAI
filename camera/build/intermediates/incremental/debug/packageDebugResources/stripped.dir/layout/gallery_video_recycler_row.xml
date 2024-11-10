@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        
+    
+                 
+                                        
+                                                                    
+
+                 
+                               
+                           
+
+                 
+                                 
+                                                       
+           
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Dark"
+                                           
+         android:tag="layout/gallery_video_recycler_row_0">
+        <ImageView
+            android:id="@+id/gallery_video"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@color/cpBackgroundbutton"
+            android:layout_marginStart="0.125dp"
+            android:layout_marginTop="0.125dp"
+            android:layout_marginEnd="0.125dp"
+            android:tag="binding_1"            
+            android:scaleType="centerCrop"
+                                              
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

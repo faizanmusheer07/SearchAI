@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_nav_graph"
+    app:startDestination="@id/myProfileFragment">
+
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.searchai.profile.myprofile.presentation.fragments.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" >
+        <action
+            android:id="@+id/action_myProfileFragment_to_room"
+            app:destination="@id/room" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_more"
+            app:destination="@id/more" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_video"
+            app:destination="@id/video" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/room"
+        android:name="com.searchai.profile.tablayouts.video.presentation.fragment.Room"
+        android:label="fragment_room"
+        tools:layout="@layout/fragment_room_tab" >
+        <action
+            android:id="@+id/action_room_to_more"
+            app:destination="@id/more" />
+        <action
+            android:id="@+id/action_room_to_video"
+            app:destination="@id/video" />
+        <action
+            android:id="@+id/action_room_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/video"
+        android:name="com.searchai.profile.tablayouts.video.presentation.fragment.Video"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video_tab" >
+        <action
+            android:id="@+id/action_video_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_video_to_more"
+            app:destination="@id/more" />
+        <action
+            android:id="@+id/action_video_to_room"
+            app:destination="@id/room" />
+    </fragment>
+    <fragment
+        android:id="@+id/more"
+        android:name="com.searchai.profile.tablayouts.more.More"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more_tab" >
+        <action
+            android:id="@+id/action_more_to_room"
+            app:destination="@id/room" />
+        <action
+            android:id="@+id/action_more_to_video"
+            app:destination="@id/video" />
+        <action
+            android:id="@+id/action_more_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/signInFragment"
+        android:name="com.searchai.profile.signin.presentation.fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <dialog
+        android:id="@+id/settingFragment"
+        android:name="com.searchai.profile.setting.presentation.fragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/editProfileFragment"
+        android:name="com.searchai.profile.editprofile.presentation.fragment.EditProfileFragment"
+        android:label="EditProfileFragment" />
+
+
+</navigation>

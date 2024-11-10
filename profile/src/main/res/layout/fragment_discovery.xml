@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/discoveryConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog"
+    android:orientation="vertical"
+    tools:context=".discovery.presentation.fragments.DiscoveryFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/discovery_profile_app_bar"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cpTransparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/discovery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/back_navigation_button_discovery_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back_arrow"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_60"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:padding="@dimen/dimen_15" />
+
+            <TextView
+                android:id="@+id/user_name_sitting"
+                app:layout_constraintBottom_toBottomOf="@+id/back_navigation_button_discovery_profile"
+                app:layout_constraintStart_toEndOf="@+id/back_navigation_button_discovery_profile"
+                app:layout_constraintTop_toTopOf="@+id/back_navigation_button_discovery_profile"
+                app:layout_constraintVertical_bias="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:text="@string/doyc"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_17"
+                android:textStyle="bold" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/cpTransparent"
+        android:elevation="@dimen/dimen_0"
+        android:foreground="@drawable/round_border_for_discovery_cardview">
+
+        <ImageView
+            android:id="@+id/imageView"
+            app:srcCompat="@drawable/ic_youtube"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginVertical="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:padding="@dimen/dimen_10" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/yout"
+            android:textAlignment="center"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/dimen_25"
+            android:thumb="@drawable/custom_switch_thumb"
+            android:track="@drawable/custom_switch_track" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:backgroundTint="@color/cpTransparent"
+        android:elevation="@dimen/dimen_0"
+        android:foreground="@drawable/round_border_for_discovery_cardview">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            app:srcCompat="@drawable/ic_instagram"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginVertical="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:padding="@dimen/dimen_13" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/inst"
+            android:textAlignment="center"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/dimen_25"
+            android:thumb="@drawable/custom_switch_thumb"
+            android:track="@drawable/custom_switch_track" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:backgroundTint="@color/cpTransparent"
+        android:elevation="@dimen/dimen_0"
+        android:foreground="@drawable/round_border_for_discovery_cardview">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            app:srcCompat="@drawable/ic_twitter"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginVertical="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:padding="@dimen/dimen_10" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:text="@string/tweet"
+            android:textAlignment="center"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/dimen_25"
+            android:thumb="@drawable/custom_switch_thumb"
+            android:track="@drawable/custom_switch_track" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView31"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:backgroundTint="@color/cpTransparent"
+        android:elevation="@dimen/dimen_0"
+        android:foreground="@drawable/round_border_for_discovery_cardview">
+
+        <ImageView
+            android:id="@+id/imageView31"
+            app:srcCompat="@drawable/ic_twitch_icon"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginVertical="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:padding="@dimen/dimen_11" />
+
+        <TextView
+            android:id="@+id/textView81"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:text="@string/twitch"
+            android:textAlignment="center"
+            android:textColor="@color/cpTextDark"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/dimen_25"
+            android:thumb="@drawable/custom_switch_thumb"
+            android:track="@drawable/custom_switch_track" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discovery_profile_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_30"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:gravity="center"
+        android:text="@string/make_Y_V"
+        android:textColor="@color/cpTextDark"
+        android:textSize="@dimen/font_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/add_topics"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_40"
+        android:text="@string/make_Y_V_E"
+        android:textColor="@color/cpHelpText"
+        android:textSize="@dimen/font_size_14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

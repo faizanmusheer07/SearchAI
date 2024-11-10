@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog"
+    android:orientation="vertical"
+    tools:context=".setting.presentation.fragment.SettingFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/profile_Settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cpTransparent"
+        android:elevation="@dimen/dimen_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_navigation_button_setting_profile"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_60"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:padding="@dimen/dimen_15"
+                android:src="@drawable/ic_back_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/user_channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:text="@string/setting"
+                android:textColor="@color/cpTextDark"
+                android:textSize="@dimen/font_size_17"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/back_navigation_button_setting_profile"
+                app:layout_constraintStart_toEndOf="@+id/back_navigation_button_setting_profile"
+                app:layout_constraintTop_toTopOf="@+id/back_navigation_button_setting_profile"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rvSettings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_Settings"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
